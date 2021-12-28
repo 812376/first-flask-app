@@ -2,7 +2,7 @@ from flask import Flask
 from config import db
 
 class Department(db.Model):
-    __table__='departments'
+    __tablename__='departments'
     department_id=db.Column(db.Integer,primary_key=True)
     name=db.Column(db.String(30),index=False,unique=False,nullable=False)
 
