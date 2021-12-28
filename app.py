@@ -1,10 +1,8 @@
+from config import app
+#from flask import Flask
 
-from flask.app import Flask
+import webapp
 
-from flask import Flask
 
-app=Flask(__name__)
-
-@app.route("/")
-def greet():
-    return "Flask App is running..!!!"
+if __name__=="__main__":
+    app.run(debug=True,host="0.0.0.0")
