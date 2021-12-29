@@ -6,6 +6,7 @@ from flask import jsonify,request,abort
 def getDepartments():
     departments=Department.query.all()
     departments=[ x.serialize() for x in departments]
+    print(departments)
     return jsonify(departments)
 
 @app.route("/departments",methods=['POST'])
