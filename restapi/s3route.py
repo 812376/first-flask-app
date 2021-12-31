@@ -1,7 +1,7 @@
 from config import app,client
 from flask import request
 
-@app.route('/upload-image',method=['POST'])
+@app.route('/upload-image',methods=['POST'])
 def upload_image():
     bucket='python-bucket234'
     content_type=request.mimetype
@@ -9,7 +9,7 @@ def upload_image():
     filename=obj.filename
     client.put_object(Body=obj,
           Bucket=bucket,
-          key=filename,
+          Key=filename,
           ContentType=content_type
     )
 
