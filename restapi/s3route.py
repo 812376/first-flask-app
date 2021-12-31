@@ -15,7 +15,7 @@ def upload_image():
 
     return {'message': 'file uploaded'}, 200
 
-@app.route("/download-file/<string:filename",methods=["GET"])
+@app.route("/download-file/<string:filename>",methods=["GET"])
 def getFileToDownload(filename):
-      client.download_file('python-bucket234',filename,"d:\\downloads\\"+filename)
+      client.download_file('python-bucket234',filename,"e:\\new-downloads\\"+filename)
       return {"message ": "check the download folder"}, 200
